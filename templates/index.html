@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center-container">
+        <h1>YouTube Sentiment Analysis Editing</h1>
+        <form method="post" class="inline-form">
+            <input type="text" name="video_ids" required placeholder="YouTube Video IDs (comma separated)">
+            <select name="chart_type">
+                <option value="bar">Bar</option>
+                <option value="pie">Pie</option>
+                <option value="count">Count</option>
+            </select>
+            <button type="submit">Analyze</button>
+        </form>
+
+        {% if chart_url %}
+        <div class="chart-section">
+            <img src="{{ chart_url }}" alt="Sentiment Chart">
+        </div>
+        {% endif %}
+
+        {% if results %}
+        <div class="results-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comment</th>
+                        <th>Sentiment</th>
+                        <th>Suggestion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for comment, sentiment, suggestion in results %}
+                    <tr>
+                        <td>{{ comment }}</td>
+                        <td class="{{ sentiment|lower }}">{{ sentiment }}</td>
+                        <td>{{ suggestion }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+    <footer>
+        <p>&copy; 2025 Your Name | Sentiment Analysis Project</p>
+    </footer>
+</body>
+</html>
