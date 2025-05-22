@@ -1,41 +1,39 @@
-YouTube Comment Sentiment Analysis Web App
-This project is a modern, dark-themed Flask web application for analyzing the sentiment of YouTube video comments. It started as a simple Colab script and was transformed into a full-featured, user-friendly web app with a beautiful interface.
+📺 YouTube Comment Sentiment Analysis Web App
+📌 Project Overview
+This project transforms YouTube video comments into actionable insights using sentiment analysis. Starting from a basic Colab script, it now features a modern Flask web app with a beautiful dark-mode interface. The app fetches comments, analyzes sentiment (positive, neutral, negative), provides tailored suggestions, and visualizes results with charts.
 
-🚀 Project Overview
-Fetches comments from YouTube videos using the YouTube Data API v3.
+📂 Data Source
+Comments are fetched live from YouTube videos via the YouTube Data API v3.
 
-Analyzes sentiment (positive, neutral, negative) for each comment using TextBlob.
+Users can analyze comments from one or more videos by entering their video IDs.
 
-Provides tailored suggestions for each comment based on its sentiment.
+🧹 Text Preprocessing
+Lowercasing all text
 
-Visualizes sentiment distribution with interactive bar, pie, or count charts (matplotlib/seaborn).
+Removing special characters and punctuation
 
-Features a modern, dark-mode web interface built with Flask, HTML, and custom CSS.
+Sentiment analysis powered by TextBlob
 
-🌟 Key Features
-Multiple video support: Analyze comments from one or more YouTube videos at once.
+📈 Features & Visualization
+Sentiment Detection: Classifies comments as Positive, Negative, or Neutral.
 
-Custom chart selection: Choose between bar, pie, or count plots for sentiment visualization.
+Smart Suggestions: Gives tailored feedback for each sentiment.
 
-Smart feedback: Each comment receives a sentiment label and a personalized suggestion.
+Visualization: Users can select Bar, Pie, or Count charts to view sentiment distribution (matplotlib/seaborn).
 
-Responsive design: All elements are centered, with oval input boxes and a sleek, modern look.
+Modern UI: All elements are centered, with oval input boxes and a sleek, dark-mode design.
 
 🛠️ How to Use
 Clone the repository:
-
-bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
 Install dependencies:
 
 bash
 pip install -r requirements.txt
 Get your own YouTube Data API key:
 
-Create a project and API key at Google Cloud Console.
+Visit Google Cloud Console.
 
-Enable the YouTube Data API v3.
+Create a project, enable the YouTube Data API v3, and generate an API key.
 
 Add your API key:
 
@@ -51,11 +49,15 @@ bash
 python app.py
 Open http://localhost:5000 in your browser.
 
-Use the web interface:
+Analyze away!
 
-Enter YouTube video IDs (comma separated).
+Enter YouTube video IDs (comma separated), select your chart type, and click "Analyze" to see results and charts.
 
-Choose your preferred chart type.
+📊 Example Output
+Sentiment Table: Shows each comment, its sentiment, and a tailored suggestion.
 
-Click "Analyze" to view results and charts.
+Charts: Visualizes the overall distribution of sentiments.
 
+🚀 Conclusion
+This project demonstrates how to combine real-time data fetching, NLP, and web development for insightful sentiment analysis of YouTube comments—all in a modern, user-friendly app!
+Try it out, star the repo, and share your feedback!
