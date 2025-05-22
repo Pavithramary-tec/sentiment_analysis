@@ -1,0 +1,7 @@
+Flask
+pandas
+textblob
+matplotlib
+seaborn
+google-api-python-client
+emoji
