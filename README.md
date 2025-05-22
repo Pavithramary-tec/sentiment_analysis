@@ -1,4 +1,5 @@
 📺 YouTube Comment Sentiment Analysis Web App
+
 📌 Project Overview
 This project transforms YouTube video comments into actionable insights using sentiment analysis. Starting from a basic Colab script, it now features a modern Flask web app with a beautiful dark-mode interface. The app fetches comments, analyzes sentiment (positive, neutral, negative), provides tailored suggestions, and visualizes results with charts.
 
